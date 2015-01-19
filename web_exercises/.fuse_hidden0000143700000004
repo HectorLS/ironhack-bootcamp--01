@@ -25,13 +25,8 @@ class Reader
 			end		
 	end
 
-	def best_rated
+	def best_rated(title, rating)
 		@movies_data.sort_by rating
-	end
-
-	def top_list
-		@movies_data.sort_by rating
-		rating
 	end
 end
 
@@ -53,7 +48,7 @@ class Graph
 	end
 end
 
-movies_reader = Reader.new("movies.txt")   #Desactivado para el testing
+#movies_reader = Reader.new("movies.txt")   #Desactivado para el testing
 puts movies_reader.show_info
 
 
